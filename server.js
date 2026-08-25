@@ -1,0 +1,36 @@
+console.log("Web Serverni boshlash");
+const express = require("express");
+const app = express();
+const http = require("http")
+
+// 1 bosqich - Kirish kodlar - public folder ochiq (css - imagesni bu yerga joylashtirish mumkin)
+app.use(express.static("public"));
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
+
+//2 - session codes
+
+//3 - view codes - backendni ichida html, frontend ni yasaymiz
+app.set("views", "views");
+app.set("view engine", "ejs");
+
+
+//4 - Routing codes
+app.get("/hello", function(req, res) {
+    res.end(`<h1 style="background: red">HELLO WORLD<h1>`);
+});
+
+
+app.get("/gift", function(req, res) {
+    res.end(`<h1 style="background: red">Siz sovgalar sahifasidasiz<h1>`);
+});
+
+
+
+
+const server = http.createServer(app);
+let PORT = 3000
+server.listen(PORT, function(){
+    console.log(`The server is running succesfully working on port: ${PORT}`);
+});
