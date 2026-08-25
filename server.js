@@ -17,6 +17,7 @@ app.set("view engine", "ejs");
 
 
 //4 - Routing codes
+/* 
 app.get("/hello", function(req, res) {
     res.end(`<h1 style="background: red">HELLO WORLD<h1>`);
 });
@@ -25,6 +26,16 @@ app.get("/hello", function(req, res) {
 app.get("/gift", function(req, res) {
     res.end(`<h1 style="background: red">Siz sovgalar sahifasidasiz<h1>`);
 });
+
+*/
+app.post("/create-item", (req, res) => {
+console.log(req.body);
+res.json({test: "success"});
+});
+
+app.get("/", function (req, res) {
+    res.render('harid');
+})
 
 
 
