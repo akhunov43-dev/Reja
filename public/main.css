@@ -1,0 +1,444 @@
+/* Outer layout frames structural system */
+.frame {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #e5e5e5;
+  margin: 0;
+  padding: 0;
+}
+
+.main_frame {
+  position: relative;
+  width: 1440px;
+  min-height: 1312px;
+  display: flex;
+  flex-direction: row;
+  background: #f7f6b9;
+}
+
+/* ==========================================
+   LEFT SIDEBAR CONFIGURATIONS
+   ========================================== */
+.main_frame .left_frame {
+  position: relative;
+  width: 305px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_frame .left_1 {
+  position: relative;
+  width: 228px;
+  margin-top: 50px;
+  margin-left: 37px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_frame .left_1 .left_1-1 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 156.16px;
+  height: 142.53px;
+  margin-bottom: 29.46px;
+  border-radius: 50%;
+}
+
+.profile-img {
+  width: 156px;
+  height: 142px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.left_1-2 {
+  position: relative;
+  margin-bottom: 6.65px;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 123.6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  color: #2b2b2b;
+}
+
+.main_frame .left_frame .left_1-3 {
+  position: relative;
+  width: 147.84px;
+  height: 25.65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #767676;
+}
+
+.left_icons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 238px;
+  margin-top: 19px;
+}
+
+.link_href {
+  text-decoration: none;
+  color: black;
+}
+
+.icon {
+  position: relative;
+  width: 24.99px;
+  height: 22.8px;
+  border-radius: 50%;
+  background: #ffb400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-1 {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  display: block;
+}
+
+.main_frame .marginer {
+  position: relative;
+  width: 220px;
+  height: 0px;
+  margin-left: 40px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  border: 1.5px solid #f0f0f6;
+}
+
+/* Metadata Text and Rows layout style blocks */
+.main_frame .left_2 {
+  background-color: transparent;
+  position: relative;
+  width: 221px;
+  margin-left: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.left_2 .info_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.left_2 .info_row .info_label {
+  background: none;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #2b2b2b;
+}
+
+.left_2 .info_row .info_value {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #767676;
+}
+
+/* Linear progress bars blocks inside containers (.left_3 and .left_4) */
+.main_frame .left_3,
+.main_frame .left_4 {
+  position: relative;
+  width: 220px;
+  margin-left: 45px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left_frame .sidebar_title {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2b2b2b;
+  margin: 0 0 12px 0;
+}
+
+.progress_item {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.progress_item .progress_text {
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #767676;
+  margin-bottom: 4px;
+}
+
+.progress_item .bar_container {
+  width: 100%;
+  height: 4px;
+  background-color: #f0f0f6;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress_item .bar_container .bar_fill {
+  height: 100%;
+  background-color: #ffb400;
+}
+
+/* Extra features block styles (.left_5) */
+.main_frame .left_5 {
+  position: relative;
+  width: 220px;
+  margin-left: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.left_5 .extra_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #767676;
+}
+
+.left_5 .extra_item i {
+  color: #ffb400;
+  font-size: 12px;
+}
+
+/* ==========================================
+   MIDDLE FRAME CONFIGURATIONS
+   ========================================== */
+.main_frame .midd_frame {
+  position: relative;
+  width: 970px;
+  margin-left: 30px;
+  margin-right: 27px;
+  display: flex;
+  flex-direction: column;
+}
+
+.midd_frame .banner {
+  position: relative;
+  width: 876px;
+  height: 467px;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px 60px;
+  box-sizing: border-box;
+}
+
+.banner .banner_text {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner_text h1 {
+  font-family: sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #2b2b2b;
+  margin: 0 0 15px 0;
+}
+
+.banner_text p {
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #767676;
+  line-height: 1.6;
+  margin: 0 0 25px 0;
+}
+
+.banner_text .hire_btn {
+  width: 154px;
+  height: 51px;
+  background-color: #ffb400;
+  color: #2b2b2b;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.banner .banner_img img {
+  width: 300px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.midd_frame .services_title {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.services_title h2 {
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2b2b2b;
+  margin: 0 0 10px 0;
+}
+
+.services_title p {
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #767676;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.midd_frame .services_grid {
+  width: 876px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-bottom: 50px;
+}
+
+.services_grid .card {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.services_grid .card .service_icon_box {
+  width: 68px;     
+  height: 68px;    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.services_grid .card .service_img_icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.services_grid .card h3 {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b2b2b;
+  margin: 0 0 8px 0;
+}
+
+.services_grid .card p {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #767676;
+  margin: 0;
+}
+
+/* ==========================================
+   RIGHT FRAME CONFIGURATIONS
+   ========================================== */
+.right_frame {
+  position: relative;
+  width: 108px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+
+.right_frame .theme_toggle {
+  background: none;
+  border: none;
+  padding: 0%;
+  font-size: 22px;
+  color: #767676;
+  cursor: pointer;
+  margin-bottom: 100px;
+}
+
+.right_frame .nav_links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.nav_links a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f0f0f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* Force the SVG icon to size correctly inside the 40px button circle */
+.nav_links a .nav-icon {
+  width: 35px;
+  height: 35px;
+  min-width: 20px;
+  min-height: 20px;
+  object-fit: contain;
+  transition: filter 0.2s ease;
+}
+
+/* Hover and Active State backgrounds */
+.nav_links a:hover,
+.nav_links a.active {
+  background-color: #ffb400;
+}
+
+/* OPTIONAL: If your SVGs are dark and you want them to turn black/dark gray on hover */
+.nav_links a:hover .nav-icon,
+.nav_links a.active .nav-icon {
+  filter: brightness(0) convert-to-black; /* Ensures code handles color shifts without shifting shapes */
+}
