@@ -5,10 +5,8 @@ const list = [
     "o'zingizga ishlashni boshlang", // 30-40
     "siz kuchli bo'lgan narsalarni qiling", // 40-50
     "yoshlarga investitsiya qiling", // 50-60
-    "endi dam oling, foydasi yo'q endi", // 60
+    "dam oling, foydasi yo'q endi", // 60
 ];
-
-
 
 
 // CALLBACK FUNCTIONS
@@ -36,11 +34,7 @@ console.log('passed here 1');
 
 
 
-
-
-
-
-//ASYNC function
+// //ASYNC function
 async function maslahatBering(a) {
     if (typeof a !== "number") throw new Error("insert a number");
     else if (a <= 20) return list[0];
@@ -49,7 +43,7 @@ async function maslahatBering(a) {
     else if (a > 40 && a <= 50) return list[3];
     else if (a > 50 && a <= 60) return list[4];
     else {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) => {      //Promise - kelajakda keladigan natija
             setTimeout(() => {
                 resolve(list[5]);
             }, 5000);
@@ -68,7 +62,7 @@ async function maslahatBering(a) {
 //   });
 // console.log("passed here 1");
 
-// call via asyn/await
+// // call via asyn/await
 async function run() {
     let javob = await maslahatBering(55);
     console.log(javob);
@@ -78,4 +72,25 @@ async function run() {
     console.log(javob);
 }
 run();
+
+
+
+
+
+//MITASK
+
+function countLetter (letter, word) {
+    let count = 0;
+
+    for (let i = 0; i< word.length; i++) {
+        if (word[i]=== letter) {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countLetter("a", "KakaoTalk"));
+console.log(countLetter("e", "Korea"));
+console.log(countLetter("l", "alligator"));
 
