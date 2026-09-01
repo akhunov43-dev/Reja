@@ -2,9 +2,6 @@
   "name": "reja",
   "version": "1.0.0",
   "description": "bu bizning birinchi loyihamiz",
-  "license": "ISC",
-  "author": "Kai",
-  "type": "commonjs",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -13,8 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "ejs": "^6.0.1",
-    "express": "^5.2.1"
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongodb": "^4.17.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
