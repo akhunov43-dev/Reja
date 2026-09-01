@@ -46,12 +46,36 @@ app.get("/gift", function(req, res) {
 
 */
 app.post("/create-item", (req, res) => {
-console.log(req.body);
-res.json({test: "success"});
+  console.log(req.body); 
+  console.log("user entered /create-item route");
+
+  const new_Reja = req.body.reja;
+  const db = require("./server").db();
+
+  db.collection("plans").insertOne({ reja: new_Reja }, (err, data) => {
+    if (err) {
+      console.log(err);
+      res.end("something went wrong");
+    } else {
+     res.end("successfully added"); }
+  });
 });
 
+
 app.get("/", function (req, res) {
-    res.render('reja');
+    console.log("user entered / route");
+    const db = require("./server").db();
+    db.collection("plans")
+    .find({})
+    .toArray((err, data) => {
+        if(err) {
+            console.log(err);
+            res.end("something went wrong");
+        } else {
+            console.log(data);
+        res.render("reja", {items: data,}); 
+        }
+    });
 });
 
 app.get('/author', (req, res) => {

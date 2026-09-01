@@ -77,7 +77,8 @@ run();
 
 
 
-//MITASK
+
+// A-TASK
 
 function countLetter (letter, word) {
     let count = 0;
@@ -94,3 +95,20 @@ console.log(countLetter("a", "KakaoTalk"));
 console.log(countLetter("e", "Korea"));
 console.log(countLetter("l", "alligator"));
 
+
+// B-TASK
+
+function countDigit (string) {
+    let count = 0;
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] >= "0" && string[i] <= "9") {
+            count++;
+        }
+    }
+    return count;   
+}
+
+
+console.log(countDigit("1asd23fe4ht85")); // 6 
+console.log(countDigit("4abc73def3w9")); // 5
+console.log(countDigit("hello3")); // 1
