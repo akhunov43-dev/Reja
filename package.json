@@ -1,9 +1,9 @@
 {
   "name": "reja",
   "version": "1.0.0",
-  "description": "\"bu bizning birinchi loyihamiz\"",
+  "description": "bu bizning birinchi loyihamiz",
   "license": "ISC",
-  "author": "\"Kai\"",
+  "author": "Kai",
   "type": "commonjs",
   "main": "server.js",
   "scripts": {
