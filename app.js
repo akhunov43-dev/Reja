@@ -3,8 +3,10 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 
-//Mongodb chaqirish - mongodb objectini olib beradi-datbasega malumotlarni yozish va o'qish uchun
-// const db = require("./server").db();
+//Mongodb chaqirish - mongodb objectini olib beradi-datbasega malumotlarni yozish uchun
+const db = require("./server").db();
+const mongodb = require("mongodb");
+//const ObjectID = require("mongodb").ObjectID;
 
 
 let user;
@@ -45,19 +47,46 @@ app.get("/gift", function(req, res) {
 });
 
 */
+// 4 Routing code
+
 app.post("/create-item", (req, res) => {
-  console.log(req.body);
-  console.log("user entered /create-item route");
-
-  const new_Reja = req.body.reja;
-  const db = require("./server").db();
-
-  db.collection("plans").insertOne({ reja: new_Reja }, (err, data) => {
-    console.log(data.ops);
-
-    res.json(data.ops[0]);
+    console.log("user entered /create-item");
+    const new_reja = req.body.reja;
+    db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
+        res.json(data.ops[0]);
     });
-  });
+});
+
+app.post("/delete-item", (req, res) => {
+    const id = req.body.id;
+    db.collection("plans").deleteOne(
+        { _id: new mongodb.ObjectId(id) },
+        function (err, data) {
+            res.json({ state: "success" });
+        }
+    );
+});
+
+app.post("/edit-item", (req, res) => {
+    const data = req.body;
+    console.log(data);
+    db.collection("plans").findOneAndUpdate(
+        { _id: new mongodb.ObjectId(data.id) },
+        { $set: { reja: data.new_input } },
+        () => {
+            res.json({ state: "success" });
+        }
+    );
+});
+
+app.post("/delete-all", (req, res) => {
+    if (req.body.delete_all) {
+    db.collection("plans").deleteMany(function () {
+        res.json({ state: "hamma rejalar o'chirildi" });
+    });
+    }
+});
+        
 
 
 app.get("/", function (req, res) {
