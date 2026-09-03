@@ -34,7 +34,7 @@
       </form>
     </div>
 
-   <!--- <%= items[1].reja %> --->
+  <!-- removed stray EJS access to items[1] to avoid errors when empty -->
 
     <ul id="item-list" class="list-group pb-5">
       <% items.map(function(item) { %>
@@ -54,7 +54,7 @@
       <% }) %>
     </ul>
 
-       <button id="clean-all" class="btn btn-danger" style="border-radius: 20px">
+      <button id="clear-all" class="btn btn-danger" style="border-radius: 20px">
         Hamma Rejalarni O'chirish
        </button> 
     </div>

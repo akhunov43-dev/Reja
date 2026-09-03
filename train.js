@@ -112,3 +112,17 @@ function countDigit (string) {
 console.log(countDigit("1asd23fe4ht85")); // 6 
 console.log(countDigit("4abc73def3w9")); // 5
 console.log(countDigit("hello3")); // 1
+
+
+// C-TASK
+
+function checkContent (str1, str2) {
+    if (str1.length !== str2.length) {
+        return false;
+    }
+    return str1.split("").sort().join("") === str2.split("").sort().join("");
+}
+
+console.log(checkContent("listen", "silent")); // true
+console.log(checkContent("class", "school")); // false
+console.log(checkContent("apple", "lppae")); // true
