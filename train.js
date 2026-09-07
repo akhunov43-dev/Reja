@@ -126,3 +126,55 @@ function checkContent (str1, str2) {
 console.log(checkContent("listen", "silent")); // true
 console.log(checkContent("class", "school")); // false
 console.log(checkContent("apple", "lppae")); // true
+
+
+// D-TASK
+
+class Shop {
+    constructor(potatoes, carrots, onions) {
+        this.potatoes = potatoes;
+        this.carrots = carrots;
+        this.onions = onions;
+    }
+
+    qoldiq() {
+        let time = new Date().toLocaleTimeString("en-GB", {
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+
+        return `Hozir ${time}da ${this.potatoes}ta kartoshka, ${this.carrots}ta sabzi va ${this.onions}ta piyoz mavjud!`;
+    }
+
+    sotish(product, amount) {
+        this[product] -= amount;
+
+        let time = new Date().toLocaleTimeString("en-GB", {
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+
+        console.log(`Hozir ${time}da ${amount}ta ${product} sotildi.`);
+    }
+
+    qabul(product, amount) {
+        this[product] += amount;
+
+        let time = new Date().toLocaleTimeString("en-GB", {
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+
+        console.log(`Hozir ${time}da ${amount}ta ${product} qabul qilindi.`);
+    }
+}
+
+const shop = new Shop(4, 5, 2);
+
+console.log(shop.qoldiq());
+
+shop.sotish("potatoes", 3);
+
+shop.qabul("onions", 4);
+
+console.log(shop.qoldiq());
