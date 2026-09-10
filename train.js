@@ -178,3 +178,22 @@ shop.sotish("potatoes", 3);
 shop.qabul("onions", 4);
 
 console.log(shop.qoldiq());
+
+
+
+/* E-TASK
+
+Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin. MASALAN: getReverse("hello") return qilsin "olleh".
+*/
+
+function getReverse(str) {
+    let reverse = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reverse += str[i];
+    }
+    return reverse;
+}
+
+console.log(getReverse("Javascript")); // "tpircsavaJ"
+console.log(getReverse("MIT9")); // "9TIM"
+console.log(getReverse("Korea")); // "aeroK"
