@@ -19,16 +19,17 @@ function maslahatBering(a, callback) {
     else if (a > 40 && a <= 50) callback(null, list[3]);
     else if (a > 50 && a <= 60) callback(null, list[4]);
     else {
-        setTimeout(function() { 
-        callback(null, list[5]); }, 5000);   //5soniyadan song javob keladi
+        setTimeout(function () {
+            callback(null, list[5]);
+        }, 5000);   //5soniyadan song javob keladi
     }
 }
 console.log('passed here 0');
 maslahatBering(65, (err, data) => {
-    if(err) console.log('ERROR: ', err);
-    else { 
-    console.log('javob:', data); 
-}
+    if (err) console.log('ERROR: ', err);
+    else {
+        console.log('javob:', data);
+    }
 })
 console.log('passed here 1');
 
@@ -80,11 +81,11 @@ run();
 
 // A-TASK
 
-function countLetter (letter, word) {
+function countLetter(letter, word) {
     let count = 0;
 
-    for (let i = 0; i< word.length; i++) {
-        if (word[i]=== letter) {
+    for (let i = 0; i < word.length; i++) {
+        if (word[i] === letter) {
             count++;
         }
     }
@@ -98,14 +99,14 @@ console.log(countLetter("l", "alligator"));
 
 // B-TASK
 
-function countDigit (string) {
+function countDigit(string) {
     let count = 0;
     for (let i = 0; i < string.length; i++) {
         if (string[i] >= "0" && string[i] <= "9") {
             count++;
         }
     }
-    return count;   
+    return count;
 }
 
 
@@ -116,7 +117,7 @@ console.log(countDigit("hello3")); // 1
 
 // C-TASK
 
-function checkContent (str1, str2) {
+function checkContent(str1, str2) {
     if (str1.length !== str2.length) {
         return false;
     }

@@ -25,7 +25,7 @@ MongoClient.connect(
             // Start the server only AFTER the database connects successfully
             const app = require("./app");
             const server = http.createServer(app);
-            const PORT = 3000;
+            const PORT = 9011;
 
             server.listen(PORT, function () {
                 console.log(`The server is running successfully on port: ${PORT}, http://localhost:${PORT}`);
