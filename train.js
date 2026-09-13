@@ -184,7 +184,8 @@ console.log(shop.qoldiq());
 
 /* E-TASK
 
-Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin. MASALAN: getReverse("hello") return qilsin "olleh".
+Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+ MASALAN: getReverse("hello") return qilsin "olleh".
 */
 
 function getReverse(str) {
@@ -198,3 +199,25 @@ function getReverse(str) {
 console.log(getReverse("Javascript")); // "tpircsavaJ"
 console.log(getReverse("MIT9")); // "9TIM"
 console.log(getReverse("Korea")); // "aeroK"
+
+
+
+/* G-TASK
+
+Shunday function tuzingki unga integerlardan iborat array pass bolsin va function bizga osha arrayning eng katta 
+qiymatiga tegishli birinchi indexni qaytarsin. MASALAN: getHighestIndex([5, 21, 12, 21, 8]) return qiladi 1 sonini.
+*/
+
+function getHighestIndex(arr) {
+  let maxIndex = 0;
+  
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > arr[maxIndex]) {
+      maxIndex = i;
+    }
+  }
+  
+  return maxIndex;
+}
+
+console.log(getHighestIndex([8, 15, 33, 9, 17, 26]));            //2
