@@ -209,15 +209,38 @@ qiymatiga tegishli birinchi indexni qaytarsin. MASALAN: getHighestIndex([5, 21, 
 */
 
 function getHighestIndex(arr) {
-  let maxIndex = 0;
-  
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > arr[maxIndex]) {
-      maxIndex = i;
+    let maxIndex = 0;
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > arr[maxIndex]) {
+            maxIndex = i;
+        }
     }
-  }
-  
-  return maxIndex;
+
+    return maxIndex;
 }
 
 console.log(getHighestIndex([8, 15, 33, 9, 17, 26]));            //2
+
+
+
+/* F-TASK
+
+Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib, agar stringda bir hil harf 
+qatnashgan bolsa true, qatnashmasa false qaytarishi kerak. MASALAN: getReverse("hello") return true return qiladi.
+*/
+
+function findDoublers(str) {
+    for (let i = 0; i < str.length; i++) {
+        for (let j = i + 1; j < str.length; j++) {
+            if (str[i] === str[j]) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+console.log(findDoublers("cheers"));       //true
+console.log(findDoublers("fridge"));       // false
+console.log(findDoublers("football"));     //true
