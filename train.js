@@ -244,3 +244,30 @@ function findDoublers(str) {
 console.log(findDoublers("cheers"));       //true
 console.log(findDoublers("fridge"));       // false
 console.log(findDoublers("football"));     //true
+
+
+
+
+
+/* K-TASK
+
+Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar 
+sonini qaytarsin. MASALAN: countVowels("string") return 1. */
+
+function countVowels(str) {
+  const vowels = "aeiouAEIOU";
+  let count = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+console.log(countVowels("Apple"));                      // 2
+console.log(countVowels("mashaqqat"));                  // 3
+console.log(countVowels("Airconditioner"));             // 7
+  
