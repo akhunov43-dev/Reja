@@ -271,3 +271,22 @@ console.log(countVowels("Apple"));                      // 2
 console.log(countVowels("mashaqqat"));                  // 3
 console.log(countVowels("Airconditioner"));             // 7
   
+
+
+
+/* L-TASK
+
+Shunday function yozing, u string qabul qilsin va string ichidagi hamma sozlarni chappasiga yozib va sozlar 
+ketma-ketligini buzmasdan stringni qaytarsin. MASALAN: reverseSentence("we like coding!") return "ew ekil gnidoc".    
+*/
+
+function reverseSentence(str) {
+  return str
+    .split(" ")
+    .map(word => word.split("").reverse().join(""))
+    .join(" ");
+}
+
+console.log(reverseSentence("I like swimming"));           // I ekil gnimmiws
+console.log(reverseSentence("Let's learn Coding"));        // s'teL nrael gnidoC
+console.log(reverseSentence("Break a leg"));               // kaerB a gel
